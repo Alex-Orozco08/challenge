@@ -37,4 +37,14 @@ function actualizarLista(){
 
 
 //Funcion para seleccionar un amigo aleatorio
-function sortear 
+function sortearAmigo(){
+    if(amigos.length == 0){
+        alert("NO hay amigos disponibles para sortear. Agrega al menos uno.");
+        return;
+    
+    }
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSortedo = amigos[indiceAleatorio];
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `Amigo sorteado: <strong>${amigoSortedo}</strong>`;
+}
